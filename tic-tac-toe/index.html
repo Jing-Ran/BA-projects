@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto:100,500" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="images/O.png">
+      <h1>Tic Tac Toe</h1>
+      <img src="images/X.png">
+    </header>
+    <h2>Play Against the Computer</h2>
+
+    <div class="game-area">
+      <div class="board">
+        <div class="cell" data-row="0" data-col="0"></div>
+        <div class="cell" data-row="0" data-col="1"></div>
+        <div class="cell" data-row="0" data-col="2"></div>
+        <div class="cell" data-row="1" data-col="0"></div>
+        <div class="cell" data-row="1" data-col="1"></div>
+        <div class="cell" data-row="1" data-col="2"></div>
+        <div class="cell" data-row="2" data-col="0"></div>
+        <div class="cell" data-row="2" data-col="1"></div>
+        <div class="cell" data-row="2" data-col="2"></div>
+      </div>
+      <div class="overlay">
+        <span class="overlay__img"></span>
+        <span class="overlay__text"></span>
+      </div>
+    </div>
+
+    <button class="restart">restart</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

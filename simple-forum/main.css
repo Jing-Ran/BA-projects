@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  outline: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.forum-wrapper {
+  border: 1px solid brown;
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  grid-template-areas:
+    "header header header header"
+    "sidebar-l main main sidebar-r";
+  grid-gap: 20px;
+}
+
+header {
+  grid-area: header;
+  justify-self: center;
+}
+
+.posts {
+  grid-area: main;
+}
+
+.sidebar--left {
+  grid-area: sidebar-l;
+}
+
+.sidebar--right {
+  grid-area: sidebar-r;
+}

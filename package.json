@@ -1,0 +1,22 @@
+{
+  "name": "ba-projects",
+  "version": "1.0.0",
+  "description": "### 1. Tic Tac Toe",
+  "main": "index.js",
+  "scripts": {
+    "server": "browser-sync start --directory --server --files '*.js, *.html, *.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jing-Ran/BA-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jing-Ran/BA-projects/issues"
+  },
+  "homepage": "https://github.com/Jing-Ran/BA-projects#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}

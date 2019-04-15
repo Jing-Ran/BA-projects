@@ -10,6 +10,7 @@
     thumbnailTemplate: thumbnailTemplateScript,
   });
 
+  // albumCover inline helper
   Handlebars.registerHelper('albumCover', (photos, id) => {
     const cover = photos.find(photo => photo.albumId === id);
     return cover.thumbnailUrl;

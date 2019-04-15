@@ -5,30 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Simple Forum</title>
-  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+
+  <!-- Handlebars Templates -->
+  <!-- Post template -->
+  <script id="post-template" type="text/x-handlebars-template">
+    <ul class="post-list">
+      {{#each posts}}
+        {{> singlePost}}
+      {{/each}}
+    </ul>
+  </script>
+
+  <!-- Single post partial -->
+  <script id="single-post-partial" type="text/x-handlebars-template">
+    <li class="post">
+      <div class="post__close"><i class="fas fa-times"></i></div>
+      <h4 class="post__title">{{title}}</h4>
+      {{#postAuthor userId}}{{/postAuthor}}
+      <div class="post__content">{{body}}</div>
+      <div class="post__comments">
+        <div class="comment-icon">
+          <i class="far fa-comment"></i>
+          <span class="comment-num"></span>
+        </div>
+        <ul class="comment-list">
+          {{#postComments id}}{{/postComments}}
+        </ul>
+        <form class="form create-comment">
+          <label>Add your comment</label>
+          <textarea class="comment-input" name="content" required></textarea>
+          <button type="submit" class="submit-comment">Submit</button>
+        </form>
+      </div>
+    </li>
+  </script>
+
+  <!-- <p class="post__author">By {{> postAuthor userId}}</p> -->
+  <script id="post-author-template" type="text/x-handlebars-template">
+
+  </script>
+
+  <!-- Create post template -->
+  <script id="create-post-template" type="text/x-handlebars-template">
+    {{#createPost newPost}}
+    {{> singlePost}}
+    {{/createPost}}
+  </script>
+
+  <!-- Recent comment template -->
+  <script id="recent-comment-template" type="text/x-handlebars-template">
+    <ul class="recent-comment-list">
+      {{#recentComment comments}}
+      <li class="recent-comment">
+        <h4 class="post__title recent-comment__title">{{postTitle ../posts postId}}</h4>
+        <p class="comment__content">
+          {{body}}
+          <span class="comment__author">By {{@email}}</span>
+          <span class="comment__timeago" date="{{getDate}}"></span>
+        </p>
+      </li>
+      {{/recentComment}}
+    </ul>
+  </script>
+
 </head>
+
 <body>
   <div class="forum-wrapper">
     <header>
-      <h2>Simple Forum</h2>
+      <h1>Simple Forum</h1>
     </header>
-    <aside class="sidebar--left">
-      <form class="create-post">
-        <label for="title"></label>
+    <aside class="sidebar sidebar--left">
+      <h3>Create a Post</h3>
+      <div class="hr"></div>
+      <form class="form create-post">
+        <label for="title">Post Title</label>
         <input id="title" type="text" name="title" required>
-        <label for="content"></label>
-        <textarea id="content" name="content"></textarea>
+        <label for="content">Post Content</label>
+        <textarea id="content" name="content" required></textarea>
         <button type="submit" class="submit-post">Submit</button>
       </form>
     </aside>
 
-    <div class="posts">posts</div>
+    <div class="feed"></div>
 
-    <aside class="sidebar--right">
+    <aside class="sidebar sidebar--right">
       <h3>Recent Comments</h3>
+      <div class="hr"></div>
     </aside>
   </div>
 
@@ -42,7 +109,9 @@
   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-  <script src="scripts/templates.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!-- <script src="scripts/timeago.js"></script> -->
+  <script src="scripts/post-template.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>

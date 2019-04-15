@@ -15,3 +15,11 @@ Used jQuery, Handlebars JS, Lightbox
 [View code](album-viewer/)
 
 [Demo](https://jing-ran.github.io/BA-projects/album-viewer/)
+
+### 3. Simple Forum
+
+Used jQuery, Handlebars JS
+
+[View code](simple-forum/)
+
+[Demo](https://jing-ran.github.io/BA-projects/simple-forum/)

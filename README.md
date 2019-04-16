@@ -23,3 +23,11 @@ Used jQuery, Handlebars JS
 [View code](simple-forum/)
 
 [Demo](https://jing-ran.github.io/BA-projects/simple-forum/)
+
+### 4. Simple Calendar Interface
+
+Used jQuery, Handlebars JS
+
+[View code](simple-calendar-interface/)
+
+[Demo](https://jing-ran.github.io/BA-projects/simple-calendar-interface/)

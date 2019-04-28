@@ -1,0 +1,129 @@
+:root {
+  --bg: #F3EEE8;
+  --border: #E2D9D0;
+  --brown: #AB8652;
+  --light-brown: #C1B291;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.wrapper {
+  /* border: 1px solid brown; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/**********
+  Timeline
+**********/
+.timeline-list {
+  display: grid;
+  grid-template-rows: repeat(25, 30px);
+  padding-right: 10px;
+  text-align: right;
+}
+
+.timeline__time,
+.timeline__time::after {
+  line-height: 30px;
+
+}
+
+.timeline__time,
+.timeline__time:nth-of-type(odd)::after {
+  font-size: 0.8em;
+  color: var(--light-brown);
+  font-weight: initial;
+}
+
+.timeline__time:nth-of-type(odd) {
+  font-weight: 600;
+  font-size: inherit;
+  color: var(--brown);
+}
+
+.timeline__time:nth-of-type(odd)::after {
+  margin-left: 5px;
+}
+
+/* The first 6 and odd items */
+.timeline__time:nth-of-type(odd):nth-of-type(-n+6)::after {
+  content: "AM";
+}
+
+/* The rest odd items */
+.timeline__time:nth-of-type(odd):nth-of-type(n+7)::after {
+  content: "PM";
+}
+
+
+
+
+/**************
+  Event board
+**************/
+.event-board {
+  box-sizing: content-box;
+  border-left: 1px solid var(--border);
+  height: 720px;
+  width: 600px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: var(--bg);
+  position: relative; /* to set it as offsetParent */
+}
+
+.event {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: none;
+  box-shadow: inset 3px 0px 0px 0px var(--brown);
+  padding: 5px 10px;
+  color: var(--brown);
+  position: absolute;
+  overflow: auto;
+}
+
+.event__title {
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.event__location,
+.event__time {
+  font-weight: 100;
+  font-size: 0.8em;
+}
+
+.event__time {
+  margin-top: 10px;
+}

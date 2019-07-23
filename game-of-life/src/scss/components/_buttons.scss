@@ -1,0 +1,22 @@
+.button {
+  border: 1px solid $text-color;
+  font-family: $text-font;
+  font-size: 0.65em;
+  background-color: transparent;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 250px;
+  outline: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $hover-color;
+    cursor: pointer;
+  }
+
+  &--stop,
+  &--reset {
+    margin-top: 50px;
+  }
+}
+

@@ -1,0 +1,16 @@
+.greeting {
+  color: palevioletred; }
+
+div {
+  border: 2px solid cadetblue; }
+  div p {
+    background: peachpuff;
+    width: 30%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    color: gray; }
+    div p:hover {
+      color: brown; }
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc2Nzcy9tYWluLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSx1QkFBdUI7O0FBRXZCO0FBQ0EsOEJBQThCO0FBQzlCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnQkFBZ0I7QUFDaEI7QUFDQSxtQkFBbUIiLCJmaWxlIjoiaW5kZXguY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmdyZWV0aW5nIHtcbiAgY29sb3I6IHBhbGV2aW9sZXRyZWQ7IH1cblxuZGl2IHtcbiAgYm9yZGVyOiAycHggc29saWQgY2FkZXRibHVlOyB9XG4gIGRpdiBwIHtcbiAgICBiYWNrZ3JvdW5kOiBwZWFjaHB1ZmY7XG4gICAgd2lkdGg6IDMwJTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDE4MGRlZyk7XG4gICAgICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgxODBkZWcpO1xuICAgIGNvbG9yOiBncmF5OyB9XG4gICAgZGl2IHA6aG92ZXIge1xuICAgICAgY29sb3I6IGJyb3duOyB9XG4iXSwic291cmNlUm9vdCI6IiJ9*/

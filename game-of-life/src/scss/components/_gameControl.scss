@@ -1,0 +1,16 @@
+.game-control {
+  border: 1px solid $text-color;
+  width: 400px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+
+  p {
+    font-family: $text-font;
+    margin-bottom: 50px;
+  }
+}

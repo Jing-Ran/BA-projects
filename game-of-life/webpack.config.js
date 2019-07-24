@@ -18,7 +18,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: __dirname + '/dist',
+    contentBase: __dirname,
     compress: true,
     hot: true
   },
@@ -71,7 +71,7 @@ module.exports = {
       filename: 'index.css',
     }),
     new HtmlWebpackPlugin({
-      template: `dist/index.html`
+      template: `index.html`
     }),
     new webpack.HotModuleReplacementPlugin(),
     // new CleanWebpackPlugin(),

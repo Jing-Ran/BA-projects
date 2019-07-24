@@ -43,3 +43,5 @@ layOutDays([{start: 500, end: 620}, {start: 540, end: 600}, {start: 30, end: 150
 Webpack
 
 [View code](game-of-life/)
+
+[Demo](https://jing-ran.github.io/BA-projects/game-of-life/)
